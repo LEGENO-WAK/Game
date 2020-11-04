@@ -34,7 +34,7 @@ public class numGame_me {
             for (int i = 0; i < 4; i++) {
                 for (int j = 0; j < 4; j++) {
                     System.out.print(game[i][j]+"\t");
-                    if (game[i][j] == 0) {
+                    if (game[i][j] == 0) {//현재 좌표찾기
                         yy = i;
                         xx = j;
                     }
@@ -52,7 +52,7 @@ public class numGame_me {
                     game[yy][xx - 1] = game[yy][xx];
                     game[yy][xx] = temp;
                     cnt += 1;
-                    yx[cnt][0] = yy;
+                    yx[cnt][0] = yy;//yx좌표에 각각 넣기
                     yx[cnt][1] = xx;
                     System.out.println("저장 완료");
 
