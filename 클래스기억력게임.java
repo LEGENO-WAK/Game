@@ -61,8 +61,6 @@ public class 클래스기억력게임 {
             }
             int sel1 = 0;
             int sel2 = 0;
-            int sel3 = 0;
-            int sel4 = 0;
             System.out.println();
             System.out.println("같은 숫자의 첫번째 위치를 입력:");
             int choice1 = scan.nextInt();
