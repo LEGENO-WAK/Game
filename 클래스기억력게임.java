@@ -26,19 +26,19 @@ public class 클래스기억력게임 {
         Scanner scan = new Scanner(System.in);
         Random ran = new Random();
 
-        for (int i = 0; i < e.front.length; i++) {
+        for (int i = 0; i < e.front.length; i++) {//자리번호를 알려주는 작업
             System.out.print(i + "\t");
         }
 
         System.out.println();
-        for (int i = 0; i < l.length; i++) {
+        for (int i = 0; i < l.length; i++) {//짝대기를 그리는 작업
             if (l[i] == 0) {
                 System.out.print("|\t");
             }
         }
 
         System.out.println();
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 1000; i++) {//자리를 랜덤으로 돌리는 작업
             int r = ran.nextInt(e.front.length);
             int temp = e.front[0];
             e.front[0] = e.front[r];
@@ -49,7 +49,7 @@ public class 클래스기억력게임 {
         while (true) {
 
             for (int i = 0; i < e.front.length; i++) {
-                if (e.front[i] == 9) {
+                if (e.front[i] == 9) {//9번이면 *표시로 출력한다
                     System.out.print("*\t");
                 } else {
                     System.out.print(e.front[i]+"\t");
@@ -68,14 +68,13 @@ public class 클래스기억력게임 {
             int choice2 = scan.nextInt();
 
             if (e.front[choice1] == e.front[choice2]) {
-                sel1 = e.front[choice1];
-                sel2 = e.front[choice2];
-                e.back[sel1 - 1] = sel1;
-                e.front[choice1] = 9;
+                sel1 = e.front[choice1];//맞은 숫자를 가져온다
+
+                e.back[sel1 - 1] = sel1;//back배열에 숫자의 자리를 번호대로 넣는다
+                e.front[choice1] = 9;//맞다면 그 자리들을 숫자 9로 바꿔준다
                 e.front[choice2] = 9;
 
-                e.cnt += 1;
-
+                e.cnt += 1;//맞다면 카운트를 한다
             }
             if (e.cnt == 5) {
                 System.out.println("프로그램 종료");
