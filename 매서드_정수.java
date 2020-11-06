@@ -7,7 +7,7 @@ class Test5 {
     }
 }
 
-public class 매서드5 {
+public class 매서드_정수 {
     public static void main(String[] args) {
         int a = 56;
         Test5 t5 = new Test5();

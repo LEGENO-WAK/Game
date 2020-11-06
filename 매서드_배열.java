@@ -6,7 +6,7 @@ class Test6 {
     }
 }
 
-public class 매서드6 {
+public class 매서드_배열 {
     public static void main(String[] args) {
         int[] arr = {10, 20, 30, 40, 50};
         Test6 t6 = new Test6();
