@@ -100,14 +100,16 @@ public class numGame_me {
                 }
             }
              else if (move == 5) {
-                temp = game[yx[cnt][0]][yx[cnt][1]];
-                game[yx[cnt][0]][yx[cnt][1]] = game[yy][xx];
-                game[yy][xx] = temp;
+                if (cnt > 0) {
+                    temp = game[yx[cnt][0]][yx[cnt][1]];
+                    game[yx[cnt][0]][yx[cnt][1]] = game[yy][xx];
+                    game[yy][xx] = temp;
 
-                cnt -= 1;
-                if (cnt == 0) {
+                    cnt -= 1;
+                }
+               else if (cnt <= 0) {
                     System.out.println("되감기 좌표값이 없습니다.");
-                    continue;
+                    break;
                 }
             }
         }
